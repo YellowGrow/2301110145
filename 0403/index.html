@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
   <div class="btns">
@@ -56,6 +57,11 @@
       <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam sint beatae rem recusandae! Illum quasi sequi cumque cum sint nisi fugit velit sed quae, consequatur nemo reiciendis rerum? Facere, tenetur.</h3>
     </div>
   </section>
+  <button class="arrow-up">
+    <span class="material-symbols-outlined">
+      arrow_upward
+    </span>
+  </button>
 
   <script>
     const btnhome = document.querySelector('.home');
@@ -83,7 +89,17 @@
     btnContact.addEventListener('click', function() {
       sectionContact.scrollIntoView({behavior:"smooth", block:"center"})
     })
-    
+    const arrowUp = document.querySelector('.arrow-up')
+    document.addEventListener('scroll', function(){
+      if (window.scrollY > 300){
+        arrowUp.classList.add('show');
+      } else{
+        arrowUp.classList.remove('show');
+      }
+    })
+    arrowUp.addEventListener('click', function() {
+      sectionHome.scrollIntoView({behavior:"smooth", block:"center"})
+    })
   </script>
 </body>
 </html>

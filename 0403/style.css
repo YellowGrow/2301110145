@@ -70,3 +70,23 @@ h3{
   background-color: white;
   border:  1px solid #fff;
 }
+
+.arrow-up{
+  position: fixed;
+  bottom: 60px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  color: white;
+  background-color: blue;
+  border-radius: 50%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.arrow-up span{
+  font-size: 50px;
+}
+.arrow-up.show{
+  opacity: 1;
+}
